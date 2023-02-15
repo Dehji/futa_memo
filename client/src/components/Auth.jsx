@@ -28,8 +28,8 @@ const Auth = () => {
 
         const { fullName, username, password, phoneNumber,  } = form;
 
-        const URL = 'http://localhost:5001/auth';
-        // const URL = 'https://medical-pager.herokuapp.com/auth';
+        // const URL = 'http://localhost:5001/auth';
+        const URL = 'http://futamemoserver-env.eba-gk7gd3kq.us-east-1.elasticbeanstalk.com/auth';
 
         const { data: { token, userId, hashedPassword } } = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`, {
             username, password, fullName, phoneNumber, 
