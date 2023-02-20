@@ -28,7 +28,8 @@ const Auth = () => {
 
         const { fullName, username, password, phoneNumber,  } = form;
 
-        // const URL = 'http://localhost:5001/auth';
+        //const URL = 'http://localhost:5001/auth';
+        //const URL = 'https://5001-dehji-futamemo-kei0emu7pey.ws-eu87.gitpod.io/auth'
         const URL = 'https://elegant-frock-lamb.cyclic.app';
 
         const { data: { token, userId, hashedPassword } } = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`, {
